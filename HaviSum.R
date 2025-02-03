@@ -6,4 +6,4 @@ precint.xts <- xts(as.matrix(raw[,2:3]), raw[,1,drop = TRUE])
 
 Monthlyprecint <- apply.monthly(precint.xts, function(x){round(colSums(x),2)})
 
-write.zoo(Monthlyprecint, file = "Monthly.csv")
+write.zoo(Monthlyprecint, file = "Monthly.csv", dec = ",")
